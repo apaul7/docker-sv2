@@ -8,4 +8,6 @@ RUN pip install numpy cython pandas pybedtools pysam>=0.9 scikit-learn>=0.19 wge
 
 RUN pip install sv2==1.5
 
+RUN chmod 777 /usr/local/lib/python2.7/site-packages/sv2/config/sv2_clf.json
+
 WORKDIR /
