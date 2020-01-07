@@ -11,4 +11,8 @@ RUN pip install sv2==1.5
 RUN chmod 777 /usr/local/lib/python2.7/site-packages/sv2/config/*
 RUN /usr/bin/yes | sv2 -download
 
+RUN wget https://github.com/arq5x/bedtools2/releases/download/v2.29.2/bedtools.static.binary && \
+  mv bedtools.static.binary bedtools && \
+  ln -s /opt/bedtools /usr/local/bin/
+
 WORKDIR /
